@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>PRUEBA UNO</ion-title>
+    <br>
+    <ion-button fill="clear" size="start" [routerLink]="['/login']"><ion-icon name="chevron-back-outline"></ion-icon> atras</ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="ion-text-center">
+    <h1>Nueva cuenta</h1>
+    Complete los campos
+  </div>
+
+  <ion-list>
+    <ion-item>
+      <ion-label position="floating">Usuario</ion-label>
+      <ion-input placeholder="Ingresa tu nick" minlength="3" maxlength="8"></ion-input>
+    </ion-item>
+
+    <ion-item fill="solid">
+      <ion-label position="floating">Correo</ion-label>
+      <ion-input type="email" ngModel email></ion-input>
+      <ion-note slot="helper">Ingresa correo Valido</ion-note>
+      <ion-note slot="error">Correo Invalido</ion-note>
+    </ion-item>
+    <br>
+    <ion-item>
+      <ion-label> <h2>Selecciona tu carrera</h2></ion-label>
+      <ion-select placeholder="">
+        <ion-select-option value="Coc">Cocina</ion-select-option>
+        <ion-select-option value="Inf">Informatica</ion-select-option>
+        <ion-select-option value="Red">Redes</ion-select-option>
+        <ion-select-option value="Ad">Administ</ion-select-option>
+        <ion-select-option value="Ot">Otros</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Contraseña </ion-label>
+      <ion-input type="password" minlength="4"></ion-input>
+    </ion-item>
+
+  </ion-list>
+
+  <ion-button (click)="presentAlert()" color="success" [routerLink]="['/login']"> <ion-label color="dark"> Registrar</ion-label></ion-button>
+  <ion-button class="" fill="clear">Limpiar</ion-button>
+
+</ion-content>

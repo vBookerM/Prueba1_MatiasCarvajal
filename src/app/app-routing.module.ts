@@ -3,13 +3,29 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'login',
     pathMatch: 'full'
+  },
+  {
+    path: 'olvido-contrasena/:valorOlvido',
+    loadChildren: () => import('./olvido-contrasena/olvido-contrasena.module').then( m => m.OlvidoContrasenaPageModule)
+  },
+  {
+    path: 'register/:valorRegistro',
+    loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule)
+  },
+  {
+    path: 'catalogo/:valorCatalogo',
+    loadChildren: () => import('./catalogo/catalogo.module').then( m => m.CatalogoPageModule)
+  },
+  {
+    path: 'detalle',
+    loadChildren: () => import('./detalle/detalle.module').then( m => m.DetallePageModule)
   },
 ];
 

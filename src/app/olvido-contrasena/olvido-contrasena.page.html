@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>PRUEBA UNO</ion-title>
+    <br>
+    <ion-button fill="clear" size="start" [routerLink]="['/login']"><ion-icon name="chevron-back-outline"></ion-icon> atras</ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="ion-text-center">
+    <h1>Recupera tu Contraseña</h1>
+    Rellena los campos para solicitar tu nueva contraseña
+  </div>
+  <br>
+
+  <ion-item fill="solid">
+    <ion-input type="email" ngModel email></ion-input>
+    <ion-label position="floating">Correo</ion-label>
+    <ion-input placeholder="Ingresa tu correo registrado"></ion-input>
+    <ion-note slot="error">Correo Invalido</ion-note>
+    <ion-note slot="helper">Ingresa correo Valido</ion-note>
+
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Usuario</ion-label>
+    <ion-input placeholder="Ingresa tu nick" minlength="3" maxlength="8"></ion-input>
+  </ion-item>
+  <br>
+  <div class="ion-text-center">
+    <ion-button (click)="presentAlert()" fill="clear" [routerLink]="['/login']"> <ion-label> Solicitar</ion-label></ion-button>
+  </div>
+
+
+</ion-content>
